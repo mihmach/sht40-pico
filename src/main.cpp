@@ -31,9 +31,9 @@ int main() {
     float rh = 0.0f;
     const auto st = sht.read(t_c, rh, SHT4x::Precision::High);
     if (st == SHT4x::Status::Ok) {
-      std::printf("T=%.2fC RH=%.2f%%\n", static_cast<double>(t_c), static_cast<double>(rh));
+      printf("T=%.2fC RH=%.2f%%\n", static_cast<double>(t_c), static_cast<double>(rh));
     } else {
-      std::printf("SHT4x read failed: %d\n", static_cast<int>(st));
+      printf("SHT4x read failed: %d\n", static_cast<int>(st));
     }
     sleep_ms(1000);
   }
